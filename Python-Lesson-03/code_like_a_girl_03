@@ -1,0 +1,28 @@
+#1 Initialise three variables
+money_start = 0.00
+saving_years = 0
+interest_rate = 0.00
+
+#2 Assign the values using input()
+
+money_start_input = input("Enter your imaginary savings to two decimal places: ")
+saving_years_input = input("Enter how many years before you want to go on a holiday: ")
+interest_rate_input = input("Enter your savings account interest rate to two decimal places: ")
+
+#3 Convert each input to a float or integer 
+money_start = float(money_start_input)
+saving_years = int(saving_years_input)
+interest_rate = float(interest_rate_input) / 100
+
+#4 Create a variable money_result
+money_result = 0.00
+
+#5 Assign the formulas to money_result
+money_result = money_start * (1 + interest_rate * saving_years)
+
+#6 print money_result 
+print(f"Your savings after {saving_years} years: ${money_result: }")
+
+#7 if the result is more than 10000 print True to the console, otherwise print False
+afford_holiday = money_result > 10000
+print("Will you be able to afford your holiday?", afford_holiday)
